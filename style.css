@@ -1,0 +1,533 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  overflow-x: hidden;
+}
+
+header {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 13px 60px;
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo {
+  height: 40px;
+}
+
+.gow-icon {
+  height: 30px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.nav-links a:hover{
+    font-weight: bold;
+}
+
+.nav-right {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.account {
+  color: white;
+  text-decoration: none;
+}
+
+.pre-purchase {
+  background-color: #3c8df2;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.hero {
+  background-image: url('bg.jpg'); 
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  position: relativ
+}
+
+.gow-logo {
+  width: 680px;
+  max-width: 75vw;
+  padding: 80px 100px 0;
+} 
+
+.icon {
+  color: white;
+  margin-right: 10px;
+}
+
+.account i,
+.pre-purchase i {
+  margin-right: 6px;
+}
+
+.background-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+/* Purches Section */
+.hero1 {
+ background: url('background.webp')no-repeat center center/cover; 
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  position: relative;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  color: white;
+  padding: 65px;
+}
+
+.left, .center, .right {
+  flex: 1 1 300px;
+}
+
+.poster {
+  width: 100%;
+  border-radius: 15px;
+}
+
+h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.stars i {
+  color: gold;
+  margin-right: 5px;
+}
+
+.purchase {
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.btn {
+  background-color: #3c8df2;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.price {
+  font-size: 20px;
+  color: #ccc;
+}
+
+.description {
+  line-height: 1.6;
+  margin-top: 15px;
+}
+
+.details {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+  border-top: 1px solid #666;
+  padding-top: 15px;
+  font-size: 16px;
+}
+
+.right {
+  background-color: transparent;   /* Optional: explicitly make it transparent */
+}
+.right h3 {
+  margin-bottom: 10px;
+}
+
+.screenshots {
+  margin-bottom: 20px;
+}
+
+.large-thumb {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.small-thumbs {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.small-thumbs img {
+  width: 30%;
+  border-radius: 10px;
+}
+
+.other-titles h3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.titles {
+  display: flex;
+  gap: 10px;
+}
+
+.titles img {
+  width: 30%;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .details {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .titles img,
+  .small-thumbs img {
+    width: 100%;
+  }
+}
+
+/* Story Section */
+.character-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+  background: url('kratos-bg.jpg') no-repeat center center/cover;
+  color: white;
+  padding: 63px;
+  height: 100vh;
+}
+
+.character-info {
+  flex: 1;
+  max-width: 700px;
+}
+
+.character-name {
+  font-size: 50px;
+  font-family: 'Georgia', serif;
+  margin-bottom: 20px;
+  color: black;
+}
+
+.character-bio {
+  font-size: 20px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  color: black;
+}
+
+.character-thumbnails {
+  display: flex;
+  gap: 20px;
+}
+
+.character-thumbnails img {
+  width: 80px;
+  height: 100px;
+  border-radius: 10px;
+  object-fit: cover;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: transform 0.3s, opacity 0.3s;
+  border: 2px solid transparent;
+}
+
+.character-thumbnails img.active,
+.character-thumbnails img:hover {
+  transform: scale(1.05);
+  opacity: 1;
+  border: 2px solid #3c8df2;
+}
+
+@media screen and (max-width: 768px) {
+  .character-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .character-image img {
+    width: 80%;
+  }
+
+  .character-info {
+    max-width: 100%;
+  }
+
+  .character-thumbnails {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+/* Account Page */
+.hero2 {
+ background: url('background.webp')no-repeat center center/cover; 
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  position: relative;
+  padding: 66px;
+}
+
+.container1 {
+  width: 70%;
+  max-width: 900px;
+  background-color: rgba(0, 0, 0, 0.85);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0,0,0,0.7);
+  margin: auto; 
+}
+
+.signup-box {
+  display: flex;
+  width: 100%;
+  
+}
+
+.left {
+  flex: 1;
+}
+
+.left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.right {
+  flex: 1;
+  padding: 40px 30px;
+  color: #fff;
+  background-color: #1e1e1e;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.right h2 {
+  margin-bottom: 10px;
+  font-size: 28px;
+}
+
+.right p {
+  font-size: 14px;
+  margin-bottom: 20px;
+  color: #ccc;
+}
+
+input[type="email"] {
+  padding: 12px;
+  width: 100%;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.continue {
+  padding: 12px;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  width: 100%;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.divider {
+  text-align: center;
+  margin: 15px 0;
+  color: #aaa;
+  position: relative;
+}
+
+.divider span {
+  background-color: #1e1e1e;
+  padding: 0 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.divider::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #444;
+  z-index: 0;
+}
+
+.google-btn,
+.playstation-btn {
+  padding: 12px;
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  border: 1px solid #444;
+  background-color: transparent;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.google-btn:hover,
+.playstation-btn:hover {
+  background-color: #333;
+}
+
+.login-text {
+  margin-top: 20px;
+  font-size: 14px;
+  text-align: center;
+  color: #ccc;
+}
+
+.login-text a {
+  color: #3b82f6;
+  text-decoration: none;
+}
+
+/* Support Section */
+.footer {
+  background-color: #111;
+  color: #fff;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.footer-nav {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-nav li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+}
+
+.footer-lang {
+  color: white;
+  font-weight: 500;
+}
+
+hr {
+  border: 0.5px solid #444;
+  margin: 20px 0;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.footer-left {
+  max-width: 60%;
+}
+
+.footer-left .logo {
+  width: 50px;
+  margin-bottom: 10px;
+}
+
+.footer-left p {
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.footer-links li a {
+  color: #ccc;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.footer-social a {
+  color: white;
+  font-size: 18px;
+  margin-left: 15px;
+  text-decoration: none;
+}
